@@ -8,6 +8,6 @@ for(var i = 0; i < sharedBackgrounds.length; i++) {
 		shares[e].style.backgroundImage = "url('" + img + "')";
 		shares[e].style.backgroundSize = sharedBackgrounds[i].getBoundingClientRect().width + "px";
 		shares[e].style.backgroundRepeat = "no-repeat";
-		shares[e].style.backgroundPosition = -shares[e].getBoundingClientRect().left + "px " + -(shares[e].getBoundingClientRect().top - sharedBackgrounds[i].getBoundingClientRect().top) + "px";
+		shares[e].style.backgroundPosition = -(shares[e].getBoundingClientRect().left - sharedBackgrounds[i].getBoundingClientRect().left) + "px " + -(shares[e].getBoundingClientRect().top - sharedBackgrounds[i].getBoundingClientRect().top) + "px";
 	}
 }
