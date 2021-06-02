@@ -6,8 +6,8 @@ for(var i = 0; i < sharedBackgrounds.length; i++) {
 	
 	for(var e = 0; e < shares.length; e++) {
 		shares[e].style.backgroundImage = "url('" + img + "')";
-		shares[e].style.backgroundSize = "100vw";
+		shares[e].style.backgroundSize = sharedBackgrounds[i].getBoundingClientRect().width + "px";
 		shares[e].style.backgroundRepeat = "no-repeat";
-		shares[e].style.backgroundPosition = -shares[e].getBoundingClientRect().left + "px 0px";
+		shares[e].style.backgroundPosition = -shares[e].getBoundingClientRect().left + "px " + -(shares[e].getBoundingClientRect().top - sharedBackgrounds[i].getBoundingClientRect().top) + "px";
 	}
 }
